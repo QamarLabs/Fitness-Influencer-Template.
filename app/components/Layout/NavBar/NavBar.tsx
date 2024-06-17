@@ -22,8 +22,8 @@ export const StyledNavLink = ({
 }) => (
   <NavLink
     className={`${className ?? ''} ${
-      isActive ? 'text-turquoise-200' : 'hover:text-turquoise-200  text-black'
-    }`}
+      isActive ? 'text-green-100' : 'hover:text-green-100  text-black'
+    } text-body`}
     {...linkProps}
   />
 );
@@ -68,7 +68,7 @@ export function NavBar() {
             : 'max-md:w-0 max-md:opacity-0'
         } transition-all duration-500 ease-in-out md:block overflow-hidden max-md:absolute max-md:animate-sideways-once max-md:h-screen max-md:bg-white max-md:pt-24 z-40 top-0 right-0`}
       >
-        <ul className="flex flex-col items-center md:flex-row gap-10 md:gap-4 min-[900px]:gap-5 lg:gap-8 justify-end text-sm md:text-[15px] leading-[22px]">
+        <ul className="flex flex-col items-center md:flex-row gap-10 md:gap-4 min-[900px]:gap-5 lg:gap-8 justify-end text-sm md:text-[20px] leading-[22px]">
           {navbarItems.map(({ ref, label, prefetch }) => (
             <li key={ref} className="relative">
               <StyledNavLink

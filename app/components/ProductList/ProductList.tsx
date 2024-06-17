@@ -12,7 +12,7 @@ export default function ProductList({
       {products?.length ? (
         <div
           className="p-3 container m-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8"
-          data-testid={testIds.SERVICE_LIST.CONTAINER}
+          data-testid={testIds.SHOP_LIST.CONTAINER}
         >
           {products.map((product, index) => (
             <ProductCard product={product} key={product.id} />
@@ -43,7 +43,7 @@ const ProductCard = ({ product }: { product: ProductInfoViewModel }) => {
   return (
     <div
       className="w-full rounded-none bg-white overflow-hidden mx-auto border border-white relative h-full min-h-[500px]"
-      data-testid={testIds.SERVICE_ITEM.CONTAINER}
+      data-testid={testIds.SHOP_ITEM.CONTAINER}
     >
       <a href={`/service/${product.slug}`}>
         <WixMediaImage

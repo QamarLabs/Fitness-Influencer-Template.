@@ -5,18 +5,18 @@ import testIds from '@app/utils/test-ids';
 import { maxWidthClassnames } from '@app/utils/tailwind-common-classes';
 
 const FooterNote = () => (
-  <div className="text-xs" data-testid={testIds.LAYOUT.FOOTER}>
-    <p>© 2023 by Personal Life Coach.</p>
+  <div className="font-body text-xs" data-testid={testIds.LAYOUT.FOOTER}>
+    <p>© 2024 Straight Path Fitness.</p>
     <p>
       <span>Powered and secured by </span>
       <span>
         <a
           className="underline"
-          href="https://wix.com/?utm_campaign=vir_created_with"
+          href="https://www.linkedin.com/in/mohamad-alhaddad-002a30161/"
           target="_blank"
           rel="noreferrer noopener"
         >
-          Wix
+          Qamar Labs LLC
         </a>
       </span>
     </p>
@@ -29,8 +29,8 @@ const Footer = () => (
       <div className="flex-1">
         <div className="px-6 sm:pr-0">
           <div className="header-line"></div>
-          <p className="font-lulo mb-10">Contact</p>
-          <div className="text-sm tracking-wide sm:mb-5">
+          <p className="font-lulo mb-10">Contact Me</p>
+          <div className="font-body text-sm tracking-wide sm:mb-5">
             <p>
               <span>Somewhere in Florida</span>
             </p>
@@ -127,7 +127,7 @@ const Footer = () => (
       <div className="flex-1">
         <form>
           <ScrollIntoView hashName="#contact" />
-          <div className="px-6 sm:pl-0 sm:pr-9">
+          <div className="font-body px-6 sm:pl-0 sm:pr-9">
             <div className="footer-form-field">
               <label htmlFor="contact-form-name" className="footer-form-label">
                 Enter Your Name

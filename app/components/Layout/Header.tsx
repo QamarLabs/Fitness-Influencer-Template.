@@ -17,9 +17,10 @@ const Header = () => {
           <a
             href="/"
             target="_self"
-            className="flex flex-col justify-between items-center min-w-[300px]"
+            className="flex flex-col justify-between items-center min-w-[300px] overflow-hidden"
           >
             <Image
+              className="scale-150"
               src="/logo/w_190.jpg"
               alt="Logo"
               width={200}

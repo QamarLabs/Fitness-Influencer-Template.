@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
 
 @font-face {
   font-display: block;
@@ -48,7 +49,7 @@
     @apply border-2;
     @apply border-black;
     @apply text-sm;
-    @apply font-medium;
+    /* @apply font-medium; */
     @apply bg-black;
     @apply hover:bg-white;
     @apply hover:text-gray-900;
@@ -66,18 +67,18 @@
     @apply border-gray-400;
     @apply hover:bg-gray-400;
   }
-
+/* 
   .font-lulo {
     font-family: lulo-clean-w01-one-bold, sans-serif;
   }
 
   .font-avenir {
     font-family: Avenir-LT-W01_35-Light1475496, sans-serif;
-  }
+  } */
 
   h1,
   .title {
-    @apply font-lulo;
+    /* @apply font-lulo; */
     @apply text-4xl;
   }
 

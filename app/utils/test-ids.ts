@@ -6,6 +6,8 @@ const ids = {
   HOME_PAGE: {
     HEADER: 'home.header',
     SERVICES_SECTION: 'home.section.services',
+    SHOP_SECTION: 'home.section.shop',
+    UPDATES_SECTION: 'home.section.updates',
     BOOK_NOW_CTA: 'home.book-now.cta',
   },
   BOOK_NOW_PAGE: {
@@ -17,6 +19,13 @@ const ids = {
   SERVICE_ITEM: {
     CONTAINER: 'service-item.container',
     BOOK_NOW_CTA: 'service-item.book-now.cta',
+  },
+  SHOP_LIST: {
+    CONTAINER: 'shop-list.container',
+  },
+  SHOP_ITEM: {
+    CONTAINER: 'shop-item.container',
+    BOOK_NOW_CTA: 'shop-item.book-now.cta',
   },
   CALENDAR_PAGE: {
     HEADER: 'calendar-page.header',

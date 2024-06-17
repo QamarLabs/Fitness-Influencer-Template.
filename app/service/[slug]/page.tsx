@@ -4,6 +4,7 @@ import { useServerAuthSession } from '@app/hooks/useServerAuthSession';
 import { useServiceFormattedPrice } from '@app/hooks/useServiceFormattedPrice';
 import { OfferedAsType } from '@app/model/service/service-types.internal';
 import { ServiceInfoViewModel } from '@app/model/service/service.mapper';
+import { maxWidthClassnames } from '@app/utils/tailwind-common-classes';
 
 const offeredAsToPaymentOptions = (offeredAs: string) =>
   offeredAs === OfferedAsType.OFFLINE
@@ -29,7 +30,7 @@ export function ServicePageWithFallback({
   service?: ServiceInfoViewModel | null;
 }) {
   return (
-    <div className="max-w-full-content mx-auto bg-white px-6 sm:px-28">
+    <div className={`${maxWidthClassnames} mx-auto bg-white px-6 sm:px-28`}>
       {service ? (
         <ServicePageView service={service} />
       ) : (

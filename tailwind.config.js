@@ -24,6 +24,10 @@ module.exports = {
         'green-100': '#459346',
         'green-200': '#497949'
       },
+      fontFamily: {
+        'heading': ['Oswald', 'sans-serif'],
+        'body': ['Oswald', 'sans-serif'],
+      },
       gridTemplateColumns: {
         'auto-sm': 'repeat(auto-fill,minmax(120px,1fr))',
       },
