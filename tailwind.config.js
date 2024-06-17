@@ -32,7 +32,7 @@ module.exports = {
         'auto-sm': 'repeat(auto-fill,minmax(120px,1fr))',
       },
       backgroundImage: {
-        'site-background': "url('/site-background.jpeg')",
+        'site-background': "url('/site-background.png')",
       },
     },
   },

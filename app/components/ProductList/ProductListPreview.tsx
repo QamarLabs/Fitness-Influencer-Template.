@@ -1,7 +1,7 @@
 'use client';
 import { ProductInfoViewModel } from '@app/model/service/product.mapper';
 
-export default function ServiceListPreviewView({
+export default function ProductListPreview({
   products,
 }: {
   products: ProductInfoViewModel[];
