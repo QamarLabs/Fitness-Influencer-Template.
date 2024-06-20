@@ -7,4 +7,3 @@
 
 [template.environment]
   NODE_VERSION = "20.6.1"
-  YARN_VERSION = "3.3.0"

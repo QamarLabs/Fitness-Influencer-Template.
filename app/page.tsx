@@ -29,7 +29,7 @@ export default async function Home() {
   return (
     <>
       <div
-        className={`lg:min-h-screen relative flex ${responsiveFlexDirection} items-center ${minWidthClassnames} mt-0 lg:mt-[-125px]`}
+        className={`lg:min-h-screen relative flex ${responsiveFlexDirection} items-center ${minWidthClassnames} mt-0 lg:mt-[0px]`}
       >
         <div className="relative z-10 w-full md:h-96 lg:w-1/2 pl-6 md:pl-12 text-black flex flex-col items-center sm:items-start justify-center">
           <div className="font-body font-bold uppercase tracking-widest">
@@ -49,7 +49,7 @@ export default async function Home() {
           </div>
         </div>
 
-        <div className="inset-0 w-full lg:w-1/2 flex items-center justify-center overflow-hidden">
+        <div className="flex inset-0 w-full lg:w-1/2 items-center justify-center overflow-hidden">
           <picture className="h-64 md:h-full">
             <source
               sizes="(max-width: 2170px) 100vw, 2170px"
