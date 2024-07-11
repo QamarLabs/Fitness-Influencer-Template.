@@ -1,5 +1,7 @@
 'use client';
 import { ProductInfoViewModel } from '@app/model/service/product.mapper';
+import { formatCurrency } from '@app/utils/price-formtter';
+import { useMemo } from 'react';
 
 export default function ProductListPreview({
   products,
@@ -23,7 +25,7 @@ export default function ProductListPreview({
 }
 
 const ProductCardPreview = ({ product }: { product: ProductInfoViewModel }) => {
-  const formattedPrice = product.info.priceData;
+  const formattedPrice = useMemo(() => formatCurrency(product.info.priceData!, "USD"), []);
 
   return (
     <div className="w-full rounded-none overflow-hidden mx-auto border-8 border-black relative h-full min-h-[300px]">

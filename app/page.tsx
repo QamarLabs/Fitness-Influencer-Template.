@@ -8,6 +8,8 @@ import {
   responsiveFlexDirection,
 } from './utils/tailwind-common-classes';
 import { safeGetProducts } from './model/service/products.api';
+import { safeGetPlans } from './model/plans/plans.api';
+import PlansListPreviewView from './components/PlansList/PlansListPreview';
 const AboutMe = lazy(() => import('@app/components/Layout/AboutMe'));
 const ProductListPreview = lazy(
   () => import('@app/components/ProductList/ProductListPreview')
@@ -25,6 +27,10 @@ export default async function Home() {
   const {
     data: { products },
   } = await safeGetProducts(wixSession, { limit: 2 });
+
+  const {
+    data: { plans },
+  } = await safeGetPlans(wixSession, { limit: 3 });
 
   return (
     <>
@@ -86,6 +92,30 @@ export default async function Home() {
       <Suspense fallback={<h4 className="font-body">Loading...</h4>}>
         <AboutMe />
       </Suspense>
+      <div className="parallax-background">
+        {plans?.length ? (
+          <div
+            className="bg-transparent p-5"
+            data-testid={testIds.HOME_PAGE.PLANS_SECTION}
+          >
+            <div className="header-line my-8"></div>
+            <h2 className="font-body mb-7 mt-10 tracking-tighter title max-w-xs sm:max-w-md">
+              Plans That Will Help You
+            </h2>
+
+            <>
+              <Suspense fallback={<h4 className="font-body">Loading...</h4>}>
+                <PlansListPreviewView plans={plans} />
+                <div className="flex my-8 justify-center">
+                  <a className="btn-main" href="/shop">
+                    More Plans
+                  </a>
+                </div>
+              </Suspense>
+            </>
+          </div>
+        ) : null}
+      </div>
       <div className="parallax-background">
         {services?.length ? (
           <div

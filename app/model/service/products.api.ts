@@ -12,7 +12,7 @@ export const safeGetProducts = (
   safeCall<{ products: ProductInfoViewModel[] }>(
     () => getProducts(wixSession, { limit }),
     { products: [] },
-    'Query Services'
+    'Query Products'
   );
 
 export const getProducts = (
@@ -49,7 +49,7 @@ export const getProductBySlug = (
           result.items?.length ? mapProductInfo(result.items[0]) : null
         ),
     null,
-    'Get Service By Slug'
+    'Get Product By Slug'
   );
 
 export const getProductById = (
@@ -66,5 +66,5 @@ export const getProductById = (
         .wixClient!.products.getProduct(productId)
         .then((productRes) => mapProductInfo(productRes.product!)),
     null,
-    'Get Service By Id'
+    'Get Product By Id'
   );

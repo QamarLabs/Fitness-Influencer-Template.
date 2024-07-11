@@ -1,6 +1,8 @@
 import WixMediaImage from '@app/components/Image/WixMediaImage';
 import testIds from '@app/utils/test-ids';
 import { ProductInfoViewModel } from '@app/model/service/product.mapper';
+import { useMemo } from 'react';
+import { formatCurrency } from '@app/utils/price-formtter';
 
 export default function ProductList({
   products,
@@ -38,7 +40,7 @@ export default function ProductList({
 }
 
 const ProductCard = ({ product }: { product: ProductInfoViewModel }) => {
-  const formattedPrice = product.info.priceData;
+  const formattedPrice = useMemo(() => formatCurrency(product.info.priceData!, "USD"), []);
 
   return (
     <div

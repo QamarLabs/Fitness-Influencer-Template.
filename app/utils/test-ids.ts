@@ -5,6 +5,7 @@ const ids = {
   },
   HOME_PAGE: {
     HEADER: 'home.header',
+    PLANS_SECTION: 'home.section.plans',
     SERVICES_SECTION: 'home.section.services',
     SHOP_SECTION: 'home.section.shop',
     UPDATES_SECTION: 'home.section.updates',

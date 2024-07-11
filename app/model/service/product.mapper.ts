@@ -18,7 +18,14 @@ export function mapProductInfo(product?: products.Product) {
   let otherMediaItems = product?.media?.items?.filter((item) => !!item) as
     | ProductImage[]
     | undefined;
-  const { name, description, convertedPriceData, visible, _id: id, slug } = product;
+  const {
+    name,
+    description,
+    convertedPriceData,
+    visible,
+    _id: id,
+    slug,
+  } = product;
   return {
     id,
     info: {
@@ -31,10 +38,8 @@ export function mapProductInfo(product?: products.Product) {
       },
       priceData:
         convertedPriceData && convertedPriceData.discountedPrice
-          ? `${
-              convertedPriceData.discountedPrice + " " + convertedPriceData.currency!
-            }`
-          : `${convertedPriceData?.price + " " + convertedPriceData?.currency!}`,
+          ? convertedPriceData.discountedPrice
+          : convertedPriceData?.price,
     },
     slug,
     visible,

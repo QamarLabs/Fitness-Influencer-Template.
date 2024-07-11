@@ -6,6 +6,7 @@ import { usePathname } from 'next/navigation';
 
 const navbarItems = [
   { ref: '/#about', label: 'About', prefetch: true },
+  { ref: '/plans', label: 'Plans', prefetch: true },
   { ref: '/book-now', label: 'Services', prefetch: true },
   { ref: '/shop', label: 'Shop', prefetch: true },
   { ref: '/#contact', label: 'Contact', prefetch: true },
@@ -22,7 +23,7 @@ export const StyledNavLink = ({
 }) => (
   <NavLink
     className={`${className ?? ''} ${
-      isActive ? 'text-green-100' : 'hover:text-green-100  text-black'
+      isActive ? 'text-green-100 underline' : 'hover:text-green-100 hover:underline  text-black'
     } text-body`}
     {...linkProps}
   />
